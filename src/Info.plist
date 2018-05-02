@@ -3,19 +3,19 @@
 <plist version="1.0">
 <dict>
 	<key>Author</key>
-	<string>Ville Lautanala</string>
+	<string>Sindre Sorhus &amp; Mathieu Dutour &amp; Ville Lautanala</string>
 	<key>Builder Version</key>
 	<string>13605.1.33.1.2</string>
 	<key>CFBundleDisplayName</key>
-	<string>Refined Github</string>
+	<string>Refined For Github</string>
 	<key>CFBundleIdentifier</key>
-	<string>fi.lautanala.refined-github</string>
+	<string>me.dutour.mathieu.refined-github</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0.2</string>
+	<string>17.11.11</string>
 	<key>CFBundleVersion</key>
-	<string>1.0.2</string>
+	<string>17.11.11</string>
 	<key>Chrome</key>
 	<dict>
 		<key>Database Quota</key>
@@ -43,9 +43,9 @@
 		</dict>
 	</dict>
 	<key>Description</key>
-	<string>Browser extension that simplifies the GitHub interface and adds useful features</string>
+	<string>Simplifies the GitHub interface and adds useful features</string>
 	<key>DeveloperIdentifier</key>
-	<string>KETPJB4C67</string>
+	<string>8SEPFSC7S3</string>
 	<key>ExtensionInfoDictionaryVersion</key>
 	<string>1.0</string>
 	<key>Permissions</key>
@@ -64,8 +64,8 @@
 		</dict>
 	</dict>
 	<key>Update Manifest URL</key>
-	<string>https://github.com/lautis/refined-github/raw/latest/Update.plist</string>
+	<string>https://github.com/mathieudutour/refined-github/raw/master/update-manifest.plist</string>
 	<key>Website</key>
-	<string>https://github.com/lautis/refined-github-safari</string>
+	<string>https://github.com/mathieudutour/refined-github-safari</string>
 </dict>
 </plist>

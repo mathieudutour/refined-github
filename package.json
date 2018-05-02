@@ -5,16 +5,17 @@
   "main": "index.js",
   "scripts": {
     "build": "npm run clean && npm run refined-github && npm run copy",
-    "clean": "rm -r Refined\\ Github.safariextension;mkdir Refined\\ Github.safariextension",
-    "copy:intersection-observer": "cp node_modules/intersection-observer/intersection-observer.js Refined\\ Github.safariextension/",
-    "copy:sources": "cp src/* Refined\\ Github.safariextension/",
+    "clean": "rm -r refined-github.safariextension;mkdir refined-github.safariextension",
+    "copy:intersection-observer": "cp node_modules/intersection-observer/intersection-observer.js refined-github.safariextension/",
+    "copy:sources": "cp src/* refined-github.safariextension/",
     "copy": "npm run copy:intersection-observer && npm run copy:sources",
-    "postcss": "postcss --use postcss-safe-important -o \"Refined Github.safariextension/content.css\" \"Refined\\ Github.safariextension/content.css\"",
+    "postcss": "postcss --use postcss-safe-important -o \"refined-github.safariextension/content.css\" \"refined-github.safariextension/content.css\"",
     "refined-github": "npm run refined-github:install && npm run refined-github:build && npm run refined-github:copy",
     "refined-github:install": "cd refined-github && npm install --no-package-lock",
     "refined-github:build": "cd refined-github && npm run build",
-    "refined-github:copy": "cp refined-github/distribution/* Refined\\ Github.safariextension",
-    "refined-github:update": "cd refined-github;git fetch;git checkout origin/master"
+    "refined-github:copy": "cp refined-github/distribution/* refined-github.safariextension",
+    "refined-github:update": "cd refined-github;git fetch;git checkout origin/master",
+    "can-release": "if [ \"$TRAVIS_EVENT_TYPE\" = cron ] && [ $(git rev-list -n 1 --since=\"26 hours ago\" master) ]; then echo :ship-it:; else false; fi"
   },
   "author": "Ville Lautanala <lautis@gmail.com>",
   "license": "ISC",
@@ -22,5 +23,6 @@
     "intersection-observer": "^0.5.0"
   },
   "devDependencies": {
+    "xar-js": "^0.2.0"
   }
 }

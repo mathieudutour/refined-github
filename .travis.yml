@@ -2,12 +2,34 @@ language: node_js
 node_js: lts/*
 os: osx
 osx_image: xcode9.3
-before_install:
-- openssl aes-256-cbc -K $encrypted_f93ab045d251_key -iv $encrypted_f93ab045d251_iv
-  -in .travis/deploy-key.enc -out .travis/deploy-key -d
+env:
+  - TAG_VERSION=${npx utc-version --apple}
+
+cache:
+  directories:
+    - node_modules
+
 before_script:
-  - bin/travis-update-submodule
+  - scripts/update-submodule
 script:
   - npm run build
-after_success:
-  - bin/travis-push-submodule-update
+after_script:
+  - scripts/push-submodule-update
+
+before_deploy: scripts/build-release
+deploy:
+  - provider: releases
+    skip_cleanup: true
+    api_key: $GH_TOKEN # Set in travis-ci.org dashboard
+    file: refined-github.safariextz
+    on:
+      tags: true
+  - provider: releases
+    skip_cleanup: true
+    api_key: $GH_TOKEN # Set in travis-ci.org dashboard
+    file: refined-github.safariextz
+    on:
+      # Set to deploy on: cron with recent commits
+      branch: master
+      condition: $(npm run can-release --silent)
+after_deploy: scripts/update-manifest

@@ -1,0 +1,9 @@
+#!/bin/sh
+
+plutil -replace "Extension Updates" -json '[{"CFBundleIdentifier": "me.dutour.mathieu.refined-github", "Developer Identifier": "8SEPFSC7S3", "CFBundleVersion": "1", "CFBundleShortVersionString": "$TAG_VERSION", "URL": "https://github.com/mathieudutour/refined-github/releases/download/$TAG_VERSION/refined-github.safariextz"}]' update-manifest.plist
+
+git add update-manifest.plist
+git commit -m 'Update manifest :sparkles:'
+
+git remote add publish https://${GH_TOKEN}@github.com/mathieudutour/refined-github-safari.git > /dev/null 2>&1
+git push publish master

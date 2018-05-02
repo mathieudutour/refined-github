@@ -1,0 +1,14 @@
+#!/bin/sh
+
+if ! $(git diff --quiet && git diff --cached --quiet) ; then
+  git config --local user.email "mathieu@dutour.me"
+  git config --local user.name "Submodule updater"
+
+  git add refined-github
+  git commit -m "Update refined-github :arrow_up:"
+
+  git --no-pager log -1
+
+  git remote add deploy https://${GH_TOKEN}@github.com/mathieudutour/refined-github-safari.git > /dev/null 2>&1
+  git push deploy master
+fi

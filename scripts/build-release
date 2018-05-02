@@ -1,0 +1,9 @@
+#!/bin/sh
+
+./setup-mac-os-certs
+
+./node_modules/.bin/xarjs create refined-github.safariextz --cert cert.pem --cert apple-intermediate.pem --cert apple-root.pem --private-key privatekey.pem refined-github.safariextension
+
+git config --local user.email "mathieu@dutour.me"
+git config --local user.name "Release builder"
+git tag $TAG_VERSION

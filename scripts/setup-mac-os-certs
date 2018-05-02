@@ -1,0 +1,6 @@
+#!/bin/sh
+
+curl -H "Authorization: token ${GH_TOKEN}" -H 'Accept: application/vnd.github.v3.raw' -O -L https://api.github.com/repos/mathieudutour/secrets/contents/safari-extension-certs/apple-intermediate.pem
+curl -H "Authorization: token ${GH_TOKEN}" -H 'Accept: application/vnd.github.v3.raw' -O -L https://api.github.com/repos/mathieudutour/secrets/contents/safari-extension-certs/apple-root.pem
+curl -H "Authorization: token ${GH_TOKEN}" -H 'Accept: application/vnd.github.v3.raw' -O -L https://api.github.com/repos/mathieudutour/secrets/contents/safari-extension-certs/cert.pem
+curl -H "Authorization: token ${GH_TOKEN}" -H 'Accept: application/vnd.github.v3.raw' -O -L https://api.github.com/repos/mathieudutour/secrets/contents/safari-extension-certs/privatekey.pem.pem
