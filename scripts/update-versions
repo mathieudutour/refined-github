@@ -1,0 +1,6 @@
+#!/bin/sh
+
+plutil -replace "CFBundleShortVersionString" -string "$TAG_VERSION" src/Info.plist
+plutil -replace "CFBundleVersion" -string "$TAG_VERSION" src/Info.plist
+
+git add src/Info.plist
