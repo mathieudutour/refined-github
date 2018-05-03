@@ -8,13 +8,13 @@
 			<key>CFBundleIdentifier</key>
 			<string>me.dutour.mathieu.refined-github</string>
 			<key>CFBundleShortVersionString</key>
-			<string>17.11.12</string>
+			<string>$TAG_VERSION</string>
 			<key>CFBundleVersion</key>
 			<string>1</string>
 			<key>Developer Identifier</key>
 			<string>8SEPFSC7S3</string>
 			<key>URL</key>
-			<string>https://raw.githubusercontent.com/mathieudutour/refined-github/master/refined-github.safariextz?raw=true</string>
+			<string>https://github.com/mathieudutour/refined-github/releases/download/$TAG_VERSION/refined-github.safariextz</string>
 		</dict>
 	</array>
 </dict>
