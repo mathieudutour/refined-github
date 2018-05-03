@@ -20,12 +20,4 @@ deploy:
     file: refined-github.safariextz
     on:
       tags: true
-  - provider: releases
-    skip_cleanup: true
-    api_key: $GH_TOKEN # Set in travis-ci.org dashboard
-    file: refined-github.safariextz
-    on:
-      # Set to deploy on: cron with recent commits
-      branch: master
-      condition: $(npm run can-release --silent)
 after_deploy: scripts/update-manifest
