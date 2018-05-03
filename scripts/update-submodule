@@ -6,4 +6,4 @@ git checkout origin/master
 
 cd ..
 
-./push-submodule-update
+./scripts/push-submodule-update
