@@ -11,8 +11,6 @@ before_script:
   - scripts/update-submodule
 script:
   - npm run build
-after_script:
-  - scripts/push-submodule-update
 
 before_deploy: scripts/build-release
 deploy:

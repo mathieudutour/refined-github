@@ -1,10 +1,12 @@
 #!/bin/sh
 
+./push-submodule-update
+
 ./setup-mac-os-certs
 
 ./node_modules/.bin/xarjs create refined-github.safariextz --cert cert.pem --cert apple-intermediate.pem --cert apple-root.pem --private-key privatekey.pem refined-github.safariextension
 
-TAG_VERSION="${npx utc-version --apple}"
+TAG_VERSION="$(./node_modules/.bin/utc-version --apple)"
 
 git config --local user.email "mathieu@dutour.me"
 git config --local user.name "Release builder"
