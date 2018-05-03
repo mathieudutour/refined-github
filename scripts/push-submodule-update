@@ -13,5 +13,6 @@ if ! $(git diff --quiet && git diff --cached --quiet) ; then
   git tag $TAG_VERSION
 
   git remote add deploy https://${GH_TOKEN}@github.com/mathieudutour/refined-github-safari.git > /dev/null 2>&1
+  git push deploy master
   git push deploy $TAG_VERSION
 fi
