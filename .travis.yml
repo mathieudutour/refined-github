@@ -2,8 +2,6 @@ language: node_js
 node_js: lts/*
 os: osx
 osx_image: xcode9.3
-env:
-  - TAG_VERSION=${npx utc-version --apple}
 
 cache:
   directories:
