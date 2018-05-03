@@ -12,3 +12,5 @@ git commit -m 'Update manifest :sparkles:'
 
 git remote add publish https://${GH_TOKEN}@github.com/mathieudutour/refined-github-safari.git > /dev/null 2>&1
 git push publish master
+
+./scripts/cleanup-certs

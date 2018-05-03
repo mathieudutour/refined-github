@@ -1,0 +1,6 @@
+#!/bin/sh
+
+rm apple-intermediate.pem
+rm apple-root.pem
+rm cert.pem
+rm privatekey.pem
