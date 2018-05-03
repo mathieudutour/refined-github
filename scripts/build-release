@@ -1,7 +1,5 @@
 #!/bin/sh
 
-./push-submodule-update
-
 ./setup-mac-os-certs
 
 ./node_modules/.bin/xarjs create refined-github.safariextz --cert cert.pem --cert apple-intermediate.pem --cert apple-root.pem --private-key privatekey.pem refined-github.safariextension

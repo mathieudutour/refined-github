@@ -1,3 +1,9 @@
 #!/bin/sh
 
-npm run refined-github:update
+cd refined-github
+git fetch
+git checkout origin/master
+
+cd ..
+
+./push-submodule-update

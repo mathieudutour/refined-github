@@ -13,8 +13,7 @@
     "refined-github": "npm run refined-github:install && npm run refined-github:build && npm run refined-github:copy",
     "refined-github:install": "cd refined-github && npm install --no-package-lock",
     "refined-github:build": "cd refined-github && npm run build",
-    "refined-github:copy": "cp refined-github/distribution/* refined-github.safariextension",
-    "refined-github:update": "cd refined-github;git fetch;git checkout origin/master"
+    "refined-github:copy": "cp refined-github/distribution/* refined-github.safariextension"
   },
   "author": "Mathieu Dutour <mathieu@dutour.me>",
   "license": "MIT",
