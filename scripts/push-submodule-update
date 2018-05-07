@@ -6,7 +6,7 @@ if ! $(git diff --quiet && git diff --cached --quiet) ; then
 
   git add refined-github
 
-  export TAG_VERSION="$(./node_modules/.bin/utc-version --apple)"
+  TAG_VERSION="$(node ./scripts/generate-version.js)"
 
   ./scripts/update-versions
 
