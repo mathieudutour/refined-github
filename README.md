@@ -1,10 +1,16 @@
 # Refined Github for Safari
 
+[![Build Status](https://travis-ci.org/mathieudutour/refined-github-safari.svg?branch=master)](https://travis-ci.org/mathieudutour/refined-github-safari)
+
 > Browser extension that simplifies the GitHub interface and adds useful features
 
 This is a Safari version of [Refined GitHub](https://github.com/sindresorhus/refined-github).
 
 ## Install
+
+[Install from the Safari Extensions Gallery](https://safari-extensions.apple.com/details/?id=me.dutour.mathieu.refined-github-8SEPFSC7S3)
+
+or
 
 [Download latest release](https://github.com/mathieudutour/refined-github-safari/releases)
 
