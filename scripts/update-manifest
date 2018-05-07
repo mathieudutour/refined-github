@@ -2,7 +2,7 @@
 
 TAG_VERSION="$(git describe --tags --abbrev=0)"
 
-plutil -replace "Extension Updates" -json "[{\"CFBundleIdentifier\": \"me.dutour.mathieu.refined-github\", \"Developer Identifier\": \"8SEPFSC7S3\", \"CFBundleVersion\": \"$TAG_VERSION\", \"CFBundleShortVersionString\": \"$TAG_VERSION\", \"URL\": \"https://github.com/mathieudutour/refined-github/releases/download/$TAG_VERSION/refined-github.safariextz\"}]" update-manifest.plist
+plutil -replace "Extension Updates" -json "[{\"CFBundleIdentifier\": \"me.dutour.mathieu.refined-github\", \"Developer Identifier\": \"8SEPFSC7S3\", \"CFBundleVersion\": \"$TAG_VERSION\", \"CFBundleShortVersionString\": \"$TAG_VERSION\", \"URL\": \"https://github.com/mathieudutour/refined-github-safari/releases/download/$TAG_VERSION/refined-github.safariextz\"}]" update-manifest.plist
 
 git config --local user.email "mathieu@dutour.me"
 git config --local user.name "Release builder"
