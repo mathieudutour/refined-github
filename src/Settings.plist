@@ -4,17 +4,33 @@
 <array>
 	<dict>
 		<key>DefaultValue</key>
-		<string>show-recently-pushed-branches</string>
+		<string></string>
+		<key>Key</key>
+		<string>customCSS</string>
+		<key>Title</key>
+		<string>Custom CSS (useful to undo unwanted styles)</string>
+		<key>Type</key>
+		<string>TextField</string>
+	</dict>
+	<dict>
+		<key>DefaultValue</key>
+		<string></string>
 		<key>Key</key>
 		<string>disabledFeatures</string>
 		<key>Title</key>
-		<string>Disabled features</string>
-		<key>Titles</key>
-		<array>
-			<string></string>
-		</array>
+		<string>Features to disable by filename (not advised)</string>
 		<key>Type</key>
 		<string>TextField</string>
+	</dict>
+	<dict>
+		<key>DefaultValue</key>
+		<string>false</string>
+		<key>Key</key>
+		<string>logging</string>
+		<key>Title</key>
+		<string>Show the features enabled on each page in the console</string>
+		<key>Type</key>
+		<string>CheckBox</string>
 	</dict>
 </array>
 </plist>

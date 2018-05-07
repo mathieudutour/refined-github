@@ -38,7 +38,9 @@
           ...data,
           options: {
             ...(data.options || {}),
-            disabledFeatures: safari.extension.settings.disabledFeatures
+            disabledFeatures: safari.extension.settings.disabledFeatures,
+            logging: safari.extension.settings.logging,
+            customCSS: safari.extension.settings.customCSS,
           }
         };
       } else {

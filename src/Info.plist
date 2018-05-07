@@ -66,6 +66,6 @@
 	<key>Update Manifest URL</key>
 	<string>https://github.com/mathieudutour/refined-github/raw/master/update-manifest.plist</string>
 	<key>Website</key>
-	<string>https://github.com/mathieudutour/refined-github-safari</string>
+	<string>https://github.com/mathieudutour/refined-github</string>
 </dict>
 </plist>

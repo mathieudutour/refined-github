@@ -15,7 +15,7 @@ if ! $(git diff --quiet && git diff --cached --quiet) ; then
   git commit -m "Update refined-github :arrow_up:"
 
   git --no-pager log -1
-  git remote add deploy https://${GH_TOKEN}@github.com/mathieudutour/refined-github-safari.git > /dev/null 2>&1
+  git remote add deploy https://${GH_TOKEN}@github.com/mathieudutour/refined-github.git > /dev/null 2>&1
   git push deploy HEAD:master
   git push deploy $TAG_VERSION
 fi

@@ -2,7 +2,7 @@
 
 TAG_VERSION="$(git describe --tags --abbrev=0)"
 
-plutil -replace "Extension Updates" -json "[{\"CFBundleIdentifier\": \"me.dutour.mathieu.refined-github\", \"Developer Identifier\": \"8SEPFSC7S3\", \"CFBundleVersion\": \"$TAG_VERSION\", \"CFBundleShortVersionString\": \"$TAG_VERSION\", \"URL\": \"https://github.com/mathieudutour/refined-github-safari/releases/download/$TAG_VERSION/refined-github.safariextz\"}]" update-manifest.plist
+plutil -replace "Extension Updates" -json "[{\"CFBundleIdentifier\": \"me.dutour.mathieu.refined-github\", \"Developer Identifier\": \"8SEPFSC7S3\", \"CFBundleVersion\": \"$TAG_VERSION\", \"CFBundleShortVersionString\": \"$TAG_VERSION\", \"URL\": \"https://github.com/mathieudutour/refined-github/releases/download/$TAG_VERSION/refined-github.safariextz\"}]" update-manifest.plist
 
 git config --local user.email "mathieu@dutour.me"
 git config --local user.name "Release builder"
@@ -10,7 +10,7 @@ git config --local user.name "Release builder"
 git add update-manifest.plist
 git commit -m 'Update manifest :sparkles:'
 
-git remote add publish https://${GH_TOKEN}@github.com/mathieudutour/refined-github-safari.git > /dev/null 2>&1
+git remote add publish https://${GH_TOKEN}@github.com/mathieudutour/refined-github.git > /dev/null 2>&1
 git push publish HEAD:master
 
 ./scripts/cleanup-certs
