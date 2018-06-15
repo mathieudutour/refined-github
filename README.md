@@ -1,4 +1,4 @@
-# Refined Github for Safari
+# Refined GitHub for Safari
 
 [![Build Status](https://travis-ci.org/mathieudutour/refined-github.svg?branch=master)](https://travis-ci.org/mathieudutour/refined-github)
 
