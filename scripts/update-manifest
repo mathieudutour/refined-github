@@ -7,10 +7,13 @@ plutil -replace "Extension Updates" -json "[{\"CFBundleIdentifier\": \"me.dutour
 git config --local user.email "mathieu@dutour.me"
 git config --local user.name "Release builder"
 
+git remote add publish https://${GH_TOKEN}@github.com/mathieudutour/refined-github.git > /dev/null 2>&1
+
+git pull publish master
+
 git add update-manifest.plist
 git commit -m 'Update manifest :sparkles:'
 
-git remote add publish https://${GH_TOKEN}@github.com/mathieudutour/refined-github.git > /dev/null 2>&1
 git push publish HEAD:master
 
 ./scripts/cleanup-certs
